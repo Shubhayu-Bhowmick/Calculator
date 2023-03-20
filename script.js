@@ -37,6 +37,12 @@ class Calculator {
     }
   
     chooseOperation(operation) {
+      if(this.currentOperand === '' && this.previousOperand !== '')
+      {
+         this.operation = operation
+         this.updateDisplay()
+         return
+      }
       if (this.currentOperand === '') return
       if (this.previousOperand !== '') {
         this.operate()
