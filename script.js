@@ -40,7 +40,7 @@ class Calculator {
       if(this.currentOperand === '' && this.previousOperand !== '')
       {
          this.operation = operation
-         this.updateDisplay()
+         this.updateDisplay();
          return
       }
       if (this.currentOperand === '') return
